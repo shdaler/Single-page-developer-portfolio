@@ -90,16 +90,22 @@
     <main id="main">
       <section class="hero">
         <div class="wrapper">
-          <img
-            src="/assets/images/image-profile-mobile.webp "
-            alt="picture of Adam Keyes"
-            srcset="
-              /assets/images/image-profile-mobile.webp  348w,
-              /assets/images/image-profile-tablet.webp  646w,
-              /assets/images/image-profile-desktop.webp 890w
-            "
-            sizes="(max-width: 599.98px) 46.4vw, (max-width:999.98px) 42vw,445px "
-          />
+          <picture>
+            <source
+              media="(min-width: 62.5em)"
+              srcset="/assets/images/image-profile-desktop.webp"
+            />
+            <source
+              media="(min-width: 37.5em)"
+              srcset="/assets/images/image-profile-tablet.webp"
+            />
+            <img
+              class="hero__image"
+              src="/assets/images/image-profile-mobile.webp"
+              alt="picture of Adam Keyes"
+            />
+          </picture>
+          <div class="hero__text"></div>
           <h1>Nice to meet you! I'm Adam Keyes.</h1>
         </div>
       </section>
