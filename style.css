@@ -38,6 +38,28 @@ body {
   /* line-height: 28/18=1,56; (put ratio because if change f.size, also ratio will be changed) */
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
+}
+
+p {
+  line-height: 1.5;
+}
+
 a {
   transition: color var(--transition);
 }
@@ -114,4 +136,36 @@ a:hover {
     flex: 1;
     margin-inline-end: auto;
   }
+}
+
+/* HERO */
+.hero {
+}
+
+.hero__wrapper {
+  position: relative;
+}
+
+.hero__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50%;
+}
+
+.hero__text {
+  position: relative;
+  text-align: center;
+  margin-top: 335px;
+}
+
+h1 > span {
+  border-bottom: 4px solid var(--accent);
+}
+
+.hero__description {
+}
+
+.hero__contact {
 }
