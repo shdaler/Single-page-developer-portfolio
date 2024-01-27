@@ -20,8 +20,10 @@
   </head>
   <body>
     <header class="header">
+      <h2 class="visually-hidden">Header</h2>
       <div class="wrapper">
         <nav class="header__nav">
+          <h2 class="visually-hidden">Navigation</h2>
           <a href="/" class="header__home">
             adamkeyes
             <span class="visually-hidden" (to home page)></span>
@@ -89,7 +91,7 @@
     </header>
     <main id="main">
       <section class="hero">
-        <div class="wrapper hero__wrapper">
+        <div class="wrapper hero__wrapper bottom-border">
           <picture>
             <source
               media="(min-width: 62.5em)"
@@ -107,15 +109,30 @@
               height="383"
             />
           </picture>
+          <img
+            class="hero__rings"
+            src="/assets/images/pattern-rings.svg"
+            alt=""
+            width="530"
+            height="129"
+          />
+          <img
+            class="hero__circle"
+            src="/assets/images/pattern-circle.svg"
+            alt=""
+            width="129"
+            height="129"
+          />
           <div class="hero__text">
-            <h1 class="hero__headline">
-              Nice to meet you! I'm <span>Adam Keyes</span>.
+            <h1 class="hero__headline header-xl">
+              Nice to<br />
+              meet you! I'm <span>Adam Keyes</span>.
             </h1>
             <p class="hero__description">
               Based in the UK, I'm a front-end developer passionate about
               building accessible web apps that users love.
             </p>
-            <a href="" class="hero__contact underline">Contact me</a>
+            <a href="#contact" class="hero__contact underline">Contact me</a>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 /* GlOBAL */
+
 :root {
   --bg-body: hsl(0, 0%, 8%);
   --bg-contact: hsl(0, 0%, 14%);
@@ -11,10 +12,17 @@
   --fs-72: 4.5rem;
   --fs-40: 2.5rem;
   --fs-48: 3rem;
+  --fs-36: 2.25rem;
   --fs-32: 2rem;
   --fs-24: 1.5rem;
+  --fs-20: 1.25rem;
   --container: 69.375rem;
   --transition: 250ms ease-in-out;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 html {
@@ -27,23 +35,29 @@ html {
   box-sizing: inherit;
 }
 
+body,
+input,
+textarea,
+button {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
   background-color: var(--bg-body);
   color: var(--text1);
   font-size: var(--fs-18);
   /* also put 18/16(default browser f.size )=1.125*/
   line-height: 1.56;
   /* line-height: 28/18=1,56; (put ratio because if change f.size, also ratio will be changed) */
-  padding-bottom: 30rem;
+  padding-bottom: 25rem;
 }
 
 h1,
 h2,
 h3,
 p {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 h1,
@@ -52,16 +66,11 @@ h3 {
   line-height: 1;
 }
 
-h1 {
+.header-xl {
   font-size: 2.5rem;
   font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
-  margin-bottom: 20px;
-}
-
-@media (min-width: 600px) {
-  h1 {
-    margin-bottom: 60px;
-  }
+  letter-spacing: -0.028em;
+  line-height: 1.1;
 }
 
 p {
@@ -75,12 +84,25 @@ a {
   transition: color var(--transition);
 }
 
-a.underline {
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+input:invalid,
+textarea:invalid {
+  outline-color: var(--invalid);
+}
+
+a.underline,
+button {
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   font-size: 1rem;
   line-height: 1.625;
-  letter-spacing: 2.29px;
+  letter-spacing: 0.143em;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text1);
@@ -97,6 +119,11 @@ a.underline {
 
 a:hover {
   color: var(--accent);
+}
+
+img,
+svg {
+  display: block;
 }
 
 .visually-hidden {
@@ -119,6 +146,12 @@ a:hover {
   .wrapper {
     width: calc(100% - 3.75rem);
   }
+}
+
+/* UTILITY */
+
+.bottom-border {
+  border-bottom: 1px solid var(--text2);
 }
 
 /* HEADER */
@@ -187,6 +220,7 @@ a:hover {
 
 .hero__wrapper {
   padding-bottom: 80px;
+  border-bottom: 1px solid var(--text2);
 }
 
 .hero__image {
