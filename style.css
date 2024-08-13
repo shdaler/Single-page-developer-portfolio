@@ -513,7 +513,7 @@ h1 > span {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-block-end: 20px;
+  margin-block-end: 18px;
   text-transform: uppercase;
 }
 
